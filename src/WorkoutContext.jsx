@@ -1,6 +1,6 @@
 // WorkoutContext
 import { createContext, useContext, useState, useRef, useEffect } from 'react';
-import useCounter from './useCounter';
+import useCounter from './usecounter';
 
 const WorkoutContext = createContext();
 
