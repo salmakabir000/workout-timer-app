@@ -24,7 +24,7 @@ export const WorkoutProvider = ({ children }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await fetch('http://localhost:3001/workouts');
+        const res = await fetch('http://localhost:3000/workouts');
         const data = await res.json();
         setHistory(data);
       } catch (err) {
@@ -59,7 +59,7 @@ export const WorkoutProvider = ({ children }) => {
             const completedSession = { task, sets, duration, rest };
 
             try {
-              const res = await fetch('http://localhost:3001/workouts', {
+              const res = await fetch('http://localhost:3000/workouts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(completedSession)
@@ -71,10 +71,10 @@ export const WorkoutProvider = ({ children }) => {
               alert(`✅ Workout Complete for "${task}"!`);
 
               increment();
-              resetSession();
             } catch (err) {
               console.error('❌ Failed to save workout session:', err);
             }
+            resetSession();
           }
         }
       }
@@ -94,6 +94,13 @@ export const WorkoutProvider = ({ children }) => {
     setIsRunning(false);
     setPhase('focus');
     setCurrentSet(1);
+
+    setTask('');
+    setDuration(0);
+    setRest(0);
+    setSets(0);
+    setIsEditing(false);
+    setEditingId(null);
   };
 
   const handleStart = () => {

@@ -1,11 +1,32 @@
 {
   "workouts": [
     {
+      "task": "plank",
+      "duration": 10,
+      "rest": 8,
+      "sets": 2,
+      "id": "4252"
+    },
+    {
       "task": "push up",
-      "duration": 5,
-      "rest": 5,
-      "sets": 4,
-      "id": "2289"
+      "duration": 10,
+      "rest": 1,
+      "sets": 2,
+      "id": "fa22"
+    },
+    {
+      "id": "e393",
+      "task": "plank",
+      "sets": 2,
+      "duration": 7,
+      "rest": 4
+    },
+    {
+      "id": "d84f",
+      "task": "plank",
+      "sets": 2,
+      "duration": 7,
+      "rest": 4
     }
   ]
 }

@@ -35,7 +35,7 @@ const HistoryList = () => {
   if (!confirm) return;
 
   try {
-    await fetch(`http://localhost:3001/workouts/${id}`, {
+    await fetch(`http://localhost:3000/workouts/${id}`, {
       method: 'DELETE'
     });
 
